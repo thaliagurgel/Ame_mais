@@ -31,11 +31,11 @@ class HomeHeader extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),*/
-          IconBtnWithCounter(
-            svgSrc: "assets/icons/Bell.svg",
-            numOfitem: 1,
-            press: () {}, // ir para tela de notificações
-          ),
+          // IconBtnWithCounter(
+          //   svgSrc: "assets/icons/Bell.svg",
+          //   numOfitem: 1,
+          //   press: () {}, // ir para tela de notificações
+          // ),
         ],
       ),
     );

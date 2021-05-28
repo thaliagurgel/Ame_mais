@@ -28,6 +28,7 @@ const String kNamelNullError = "Por favor, digite seu nome";
 const String kSobrenomeError = "Por favor, digite seu sobrenome";
 const String kPhoneNumberNullError = "Por favor, digite seu telefone";
 const String kAddressNullError = "Por favor, digite seu e-mail";
+const String kEnderecoNullError = "Por favor, digite seu endereço";
 const String kIdadeError = "Por favor, digite sua idade";
 
 final headingStyle = TextStyle(

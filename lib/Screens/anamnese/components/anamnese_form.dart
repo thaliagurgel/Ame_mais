@@ -228,14 +228,14 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       onSaved: (newValue) => address = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
-          removeError(error: kAddressNullError);
+          removeError(error: kEnderecoNullError);
         }
         //return null;
         address = value;
       },
       validator: (value) {
         if (value.isEmpty) {
-          addError(error: kAddressNullError);
+          addError(error: kEnderecoNullError);
           return "";
         }
         return null;

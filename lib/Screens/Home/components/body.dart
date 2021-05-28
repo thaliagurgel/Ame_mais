@@ -15,9 +15,9 @@ class Body extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: getProportionateScreenHeight(10)),
+            SizedBox(height: getProportionateScreenHeight(80)),
             HomeHeader(),
-            SizedBox(height: getProportionateScreenWidth(60)),
+            SizedBox(height: getProportionateScreenWidth(20)),
             SizedBox(height: getProportionateScreenWidth(30)),
             PopularProducts(),
             SizedBox(height: getProportionateScreenWidth(20)),
