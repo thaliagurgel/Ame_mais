@@ -228,14 +228,14 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       onSaved: (newValue) => address = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
-          // removeError(error: kAddressNullError);
+          removeError(error: kAddressNullError);
         }
         //return null;
         address = value;
       },
       validator: (value) {
         if (value.isEmpty) {
-          // addError(error: kAddressNullError);
+          addError(error: kAddressNullError);
           return "";
         }
         return null;
@@ -255,7 +255,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       onSaved: (newValue) => idade = newValue,
       validator: (value) {
         if (value.isEmpty) {
-          // addError(error: kIdadeError);
+          addError(error: kIdadeError);
           return "";
         }
         //return null;
@@ -274,7 +274,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       controller: racasSelected,
       hintText: "Selecione sua Raça",
       enabled: true,
-      // required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: racas,
       onValueChanged: (value) {
@@ -291,7 +291,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       controller: estadoSelected,
       hintText: "Selecione seu Estado",
       enabled: true,
-      // required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: estados,
       onValueChanged: (value) {
@@ -308,7 +308,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       controller: escolaridadeSelected,
       hintText: "Escolaridade",
       enabled: true,
-      // required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: escolaridades,
       onValueChanged: (value) {
@@ -325,7 +325,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       controller: licencaMaternidadeSelected,
       hintText: "Licença Maternidade",
       enabled: true,
-      // required: true,
+      required: true,
       itemsVisibleInDropdown: 3,
       items: licencas,
       onValueChanged: (value) {
@@ -342,7 +342,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       controller: numeroDeFilhosSelected,
       hintText: "Número de Filhos",
       enabled: true,
-      // required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: filhos,
       onValueChanged: (value) {
@@ -359,7 +359,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       controller: diasPosPartoSelected,
       hintText: "Dias Pós-Parto",
       enabled: true,
-      // required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: diasPosParto,
       onValueChanged: (value) {
@@ -376,7 +376,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       controller: estadoCivilSelected,
       hintText: "Estado Civil",
       enabled: true,
-      // required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: estadosCivil,
       onValueChanged: (value) {
@@ -393,7 +393,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       controller: moradiaSelected,
       hintText: "Mora Com",
       enabled: true,
-      // required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: moradia,
       onValueChanged: (value) {
@@ -410,7 +410,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       onSaved: (newValue) => country = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
-          //removeError(error: kNamelNullError);
+          // removeError(error: kNamelNullError);
         }
         country = value;
       },
@@ -428,7 +428,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       onSaved: (newValue) => licencaMaternidade = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
-          //removeError(error: kNamelNullError);
+          // removeError(error: kNamelNullError);
         }
         dLicencaMaternidade = value;
       },
@@ -446,7 +446,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       onSaved: (newValue) => lastName = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
-          //removeError(error: kNamelNullError);
+          removeError(error: kSobrenomeError);
         }
         lastName = value;
       },
@@ -464,7 +464,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
       onSaved: (newValue) => firstName = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
-          //removeError(error: kNamelNullError);
+          removeError(error: kNamelNullError);
         }
         //return null;
         firstName = value;

@@ -20,13 +20,13 @@ class _SobreAleitamentoFormState extends State<SobreAleitamentoForm> {
   bool value = false;
   final _formKey = GlobalKey<FormState>();
   final List<String> errors = [];
-   String jAmamentou; 
-   String tTempo; //
-   String tDificuldade; //ok
-   String qDificuldades; //ok
-   String isAmamentando; //ok
-   String ofertando; //ok
-   String tProducao; //ok
+  String jAmamentou;
+  String tTempo; //
+  String tDificuldade; //ok
+  String qDificuldades; //ok
+  String isAmamentando; //ok
+  String ofertando; //ok
+  String tProducao; //ok
 // ja amamentou
   String selectAmamentou = "";
   final amamentouSelected = TextEditingController();
@@ -155,7 +155,7 @@ class _SobreAleitamentoFormState extends State<SobreAleitamentoForm> {
       controller: amamentouSelected,
       hintText: "Já amamentou?",
       enabled: true,
-      //required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: amamentou,
       onValueChanged: (value) {
@@ -172,7 +172,7 @@ class _SobreAleitamentoFormState extends State<SobreAleitamentoForm> {
       controller: tempoSelected,
       hintText: "Por Quanto tempo?",
       enabled: true,
-      //required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: tempo,
       onValueChanged: (value) {
@@ -189,7 +189,7 @@ class _SobreAleitamentoFormState extends State<SobreAleitamentoForm> {
       controller: dificuldadeSelected,
       hintText: "Sentiu Dificuldade?",
       enabled: true,
-     // required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: dificuldade,
       onValueChanged: (value) {
@@ -206,7 +206,7 @@ class _SobreAleitamentoFormState extends State<SobreAleitamentoForm> {
       controller: quaisDificuldadesSelected,
       hintText: "Quais?",
       enabled: true,
-      //required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: quaisDificuldades,
       onValueChanged: (value) {
@@ -223,7 +223,7 @@ class _SobreAleitamentoFormState extends State<SobreAleitamentoForm> {
       controller: isAmamentandoSelected,
       hintText: "Está amamentando?",
       enabled: true,
-      //required: true,
+      required: true,
       itemsVisibleInDropdown: 3,
       items: amamentando,
       onValueChanged: (value) {
@@ -240,7 +240,7 @@ class _SobreAleitamentoFormState extends State<SobreAleitamentoForm> {
       controller: ofertaSelected,
       hintText: "Oferta Algo Além do Leite?",
       enabled: true,
-      //required: true,
+      required: true,
       itemsVisibleInDropdown: 3,
       items: oferta,
       onValueChanged: (value) {
@@ -257,7 +257,7 @@ class _SobreAleitamentoFormState extends State<SobreAleitamentoForm> {
       controller: producaoSelected,
       hintText: "Boa produção de Leite?",
       enabled: true,
-     // required: true,
+      required: true,
       itemsVisibleInDropdown: 3,
       items: producao,
       onValueChanged: (value) {
@@ -269,25 +269,20 @@ class _SobreAleitamentoFormState extends State<SobreAleitamentoForm> {
     );
   }
 
-
   void add() async {
-
-   
-
     var data = {
-     'jAmamentou':jAmamentou,
-     'tTempo': tTempo,
-     'tDificuldade': tDificuldade,
-     'qDificuldades': qDificuldades,
-     'isAmamentando': isAmamentando,
-     'ofertando':ofertando,
-     'tProducao': tProducao,
+      'jAmamentou': jAmamentou,
+      'tTempo': tTempo,
+      'tDificuldade': tDificuldade,
+      'qDificuldades': qDificuldades,
+      'isAmamentando': isAmamentando,
+      'ofertando': ofertando,
+      'tProducao': tProducao,
     };
-    
+
     FirebaseFirestore.instance
         .collection('aboutBreastfeeding')
-        .doc(FirebaseAuth.instance.currentUser.uid).set(data);
-
+        .doc(FirebaseAuth.instance.currentUser.uid)
+        .set(data);
   }
 }
-

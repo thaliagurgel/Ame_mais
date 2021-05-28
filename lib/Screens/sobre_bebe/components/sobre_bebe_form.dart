@@ -127,7 +127,7 @@ class _SobreOBebeFormState extends State<SobreOBebeForm> {
       controller: idadeSelected,
       hintText: "Meses do Bebê",
       enabled: true,
-      // required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: idades,
       onValueChanged: (value) {
@@ -144,7 +144,7 @@ class _SobreOBebeFormState extends State<SobreOBebeForm> {
       controller: sexoSelected,
       hintText: "Sexo do Bebê",
       enabled: true,
-      //required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: sexoBebe,
       onValueChanged: (value) {
@@ -161,7 +161,7 @@ class _SobreOBebeFormState extends State<SobreOBebeForm> {
       controller: tipoDePartoSelected,
       hintText: "Tipo De Parto",
       enabled: true,
-      //required: true,
+      required: true,
       itemsVisibleInDropdown: 5,
       items: tiposDeParto,
       onValueChanged: (value) {
@@ -178,7 +178,7 @@ class _SobreOBebeFormState extends State<SobreOBebeForm> {
       controller: ifMamouSelected,
       hintText: "Mamou na Primeira hora de Vida?",
       enabled: true,
-      //required: true,
+      required: true,
       itemsVisibleInDropdown: 3,
       items: mamou,
       onValueChanged: (value) {
@@ -213,7 +213,7 @@ class _SobreOBebeFormState extends State<SobreOBebeForm> {
       onSaved: (newValue) => comprimento = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
-          //removeError(error: kNamelNullError);
+          // removeError(error: kNamelNullError);
         }
         comprimento = value;
       },
@@ -231,14 +231,14 @@ class _SobreOBebeFormState extends State<SobreOBebeForm> {
       onSaved: (newValue) => firstName = newValue,
       onChanged: (value) {
         if (value.isNotEmpty) {
-          // removeError(error: kNamelNullError);
+          removeError(error: kNamelNullError);
         }
         //return null;
         firstName = value;
       },
       validator: (value) {
         if (value.isEmpty) {
-          //addError(error: kNamelNullError);
+          addError(error: kNamelNullError);
           return "";
         }
         return null;
